@@ -51,6 +51,8 @@ docker-compose up -d --build
 
 ## 🌐 Cloud Deployment
 
+![Docker Hub Mockup](imageDockerHb.png)
+
 ### Docker Hub
 The latest image is available on Docker Hub:
 ```bash
@@ -67,7 +69,9 @@ To deploy to AWS:
 ## 📁 Project Structure
 
 ```text
-flask-redis-app/
+├── imagedocker.png     # 3D Architecture Diagram
+├── imageUI.png         # App Interface Preview
+├── imageDockerHb.png   # Docker Hub Repository Mockup
 ├── app.py              # Flask logic & logging
 ├── Dockerfile          # Web container instructions
 ├── docker-compose.yml  # Multi-container orchestration
@@ -75,11 +79,8 @@ flask-redis-app/
 ├── requirements.txt    # Python dependencies
 ├── static/
 │   └── index.css       # Premium Design System
-├── templates/
-│   └── index.html      # Glassmorphism Template
-└── docs/
-    ├── architecture.png# 3D Architecture Diagram
-    └── ui_mockup.png    # App Interface Preview
+└── templates/
+    └── index.html      # Glassmorphism Template
 ```
 
 ---
