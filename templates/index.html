@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask + Redis | Cloud App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <h1>Cloud Metrics</h1>
+            <p>Real-time analytics powered by Flask and Redis containerization.</p>
+            
+            <div class="counter-badge">
+                <span id="counter">{{ count }}</span> Total Visits
+            </div>
+
+            <div>
+                <button class="refresh-btn" onclick="location.reload()">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    Update Metric
+                </button>
+            </div>
+
+            <div class="status">
+                <span class="dot"></span>
+                System Connected
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Subtle entrance animation for the counter
+        const counter = document.getElementById('counter');
+        const finalValue = parseInt(counter.innerText);
+        let startValue = Math.max(0, finalValue - 20);
+        
+        if (finalValue > 0) {
+            const duration = 1000;
+            const increment = (finalValue - startValue) / (duration / 16);
+            
+            const updateCounter = () => {
+                startValue += increment;
+                if (startValue < finalValue) {
+                    counter.innerText = Math.floor(startValue);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = finalValue;
+                }
+            };
+            updateCounter();
+        }
+    </script>
+</body>
+</html>
