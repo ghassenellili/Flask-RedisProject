@@ -1,6 +1,6 @@
 # 🐳 Flask + Redis + Nginx: Containerized Cloud App
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](imagedocker.png)
 
 A professional, containerized microservices application featuring a **Flask** backend, a persistent **Redis** database, and an **Nginx** reverse proxy. This project demonstrates high-availability architecture, internal networking security, and cloud-ready deployment patterns.
 
@@ -17,7 +17,7 @@ A professional, containerized microservices application featuring a **Flask** ba
 
 ## 🖼️ Application Interface
 
-![UI Mockup](docs/ui_mockup.png)
+![UI Mockup](imageUI.png)
 
 ---
 
