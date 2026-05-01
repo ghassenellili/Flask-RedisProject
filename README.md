@@ -1,3 +1,12 @@
+# 👨‍🎓 Student Report
+
+![Header](horizon.png)
+
+**Name:** Ghassen Ellili  
+**Status:** Student in Master 1 GL DevOps
+
+---
+
 # 🐳 Flask + Redis + Nginx: Containerized Cloud App
 
 ![Architecture Diagram](imagedocker.png)
