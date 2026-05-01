@@ -17,7 +17,7 @@ A professional, containerized microservices application featuring a **Flask** ba
 
 ## 🖼️ Application Interface
 
-![UI Mockup](imageUI.png)
+![UI Mockup](image.png)
 
 ---
 
